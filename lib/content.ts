@@ -253,18 +253,18 @@ export const SERVICES: Service[] = [
 export const REALISATIONS: { src: string; title: string; cat: string }[] = [
   {
     "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d018c8735_filter_6489d03f895cf.jpg?width=850",
-    "title": "Un canapé Conforama",
-    "cat": "Salons & canapés"
+    "title": "Cuisine équipée & finitions",
+    "cat": "Cuisine & aménagement"
   },
   {
     "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d019cafe0_filter_67e0515e1ea98.jpg",
-    "title": "Une armoire Conforama",
-    "cat": "Chambres & dressings"
+    "title": "Dressing PAX & rangements",
+    "cat": "Dressings & rangement"
   },
   {
     "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d01968f3c_filter_67e2d44d279db.jpg",
-    "title": "Un dressing Alinéa",
-    "cat": "Chambres & dressings"
+    "title": "Bureau & mobilier professionnel",
+    "cat": "Bureaux & espaces pro"
   },
   {
     "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d01ac2448_filter_67e2d67a581a1.jpg",

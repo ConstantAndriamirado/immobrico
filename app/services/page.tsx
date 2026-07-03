@@ -17,7 +17,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Nos services"
         title="Du meuble à l'espace fini."
-        subtitle="Un interlocuteur unique pour le montage de meubles, la pose de cuisine, l'agencement et l'aménagement clé en main de vos espaces, à Orléans et dans le Loiret."
+        subtitle="Un interlocuteur unique pour le montage de meubles, la livraison de meubles, l'agencement, le mobilier professionnel, la logistique et la conception 3D de vos espaces, à Orléans et dans le Loiret."
         crumbs={[{ label: 'Services' }]}
       />
       <section className="sec">

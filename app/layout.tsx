@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'ImmoBrico',
     url: 'https://www.immobrico.eu',
   },
-  icons: { icon: '/icon.png' },
+  icons: { icon: '/logo-immobrico.png' },
   robots: { index: true, follow: true },
 };
 

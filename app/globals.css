@@ -56,12 +56,18 @@
   .brand .mk i{position:absolute;left:8px;bottom:0;width:20px;height:7px;background:var(--cream);border-radius:2px}
   .brand .wm{display:flex;flex-direction:column;line-height:1;font-weight:700;font-size:1.16rem;letter-spacing:.01em;color:var(--cream)}
   .brand .wm small{font-family:"Inter";font-weight:600;font-size:.5rem;letter-spacing:.16em;color:var(--gold);text-transform:uppercase;margin-top:3px}
-  .nav-links{display:flex;align-items:center;gap:2rem}
-  .nav-links a{font-size:.92rem;font-weight:400;color:var(--cream-2);transition:color .2s}
-  .nav-links a:hover{color:var(--gold)}
+  .nav-links{display:flex;align-items:center;gap:1.4rem}
+  .nav-links a,.nav-dropdown-toggle{font-size:.92rem;font-weight:400;color:var(--cream-2);transition:color .2s;border:0;background:none;cursor:pointer;font-family:inherit;padding:0}
+  .nav-links a:hover,.nav-dropdown-toggle:hover,.nav-dropdown-toggle[aria-expanded="true"]{color:var(--gold)}
+  .nav-dropdown{position:relative}
+  .nav-dropdown-menu{position:absolute;top:calc(100% + .8rem);left:-1rem;min-width:220px;padding:.75rem;border:1px solid var(--line);border-radius:12px;background:rgba(18,16,18,.96);box-shadow:0 24px 40px -24px rgba(0,0,0,.55);display:grid;gap:.25rem;opacity:0;pointer-events:none;transform:translateY(6px);transition:.25s var(--ease)}
+  .nav-dropdown-menu.open{opacity:1;pointer-events:auto;transform:translateY(0)}
+  .nav-dropdown-menu a{display:block;padding:.7rem .85rem;border-radius:8px;color:var(--cream-2)}
+  .nav-dropdown-menu a:hover{background:rgba(201,167,95,.08);color:var(--gold)}
   .nav-r{display:flex;align-items:center;gap:1.3rem}
   .nav-tel{font-family:"Space Grotesk";font-weight:500;font-size:.92rem;display:flex;align-items:center;gap:.45rem}
   .nav-tel .sq{width:6px;height:6px;background:var(--gold)}
+  .btn--header{padding:clamp(.62rem,.9vw,.8rem) clamp(.9rem,1.4vw,1.2rem);font-size:clamp(.74rem,.95vw,.92rem);line-height:1.1;white-space:nowrap}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
   .burger span{width:23px;height:1.5px;background:var(--cream);transition:.3s var(--ease)}
   .burger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
@@ -72,9 +78,11 @@
   .mobile-menu.open{transform:translateY(0)}
   .mobile-menu a{display:block;padding:.85rem 0;font-family:"Space Grotesk";font-weight:500;font-size:1.12rem;border-bottom:1px solid var(--line-2)}
   .mobile-menu .btn{margin-top:1.2rem}
+  .mobile-menu-group{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--line-2)}
+  .mobile-menu-title{display:block;font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);margin-bottom:.4rem}
 
   /* hero */
-  .hero{position:relative;padding:clamp(8.5rem,15vw,12rem) 0 clamp(2.5rem,5vw,3.5rem);overflow:hidden}
+  .hero{position:relative;padding:clamp(6.8rem,12vw,9.8rem) 0 clamp(2.5rem,5vw,3.5rem);overflow:hidden}
   .hero::before{content:"";position:absolute;top:-12%;right:-6%;width:50vw;height:50vw;max-width:680px;max-height:680px;
     background:radial-gradient(circle,rgba(201,167,95,.13),transparent 62%);pointer-events:none}
   .hero-inner{position:relative;z-index:2}
@@ -83,6 +91,18 @@
   .hero-cta{display:flex;align-items:center;gap:1.4rem;flex-wrap:wrap;margin-top:2.2rem}
   .hero-meta{display:flex;flex-wrap:wrap;gap:0;margin-top:clamp(2.8rem,5vw,4rem);border-top:1px solid var(--line);padding-top:1.5rem}
   .hero-meta .m{padding-right:2rem;margin-right:2rem;border-right:1px solid var(--line)}
+  .hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.28}
+  .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:clamp(2rem,4vw,3rem)}
+  .service-card{display:flex;flex-direction:column;height:100%;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--noir-3)}
+  .service-card--alt{transform:translateY(1.2rem)}
+  .service-media{aspect-ratio:16/10;overflow:hidden;background:var(--noir-4)}
+  .service-media img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+  .service-card:hover .service-media img{transform:scale(1.04)}
+  .service-body{padding:1.4rem}
+  .service-kicker{display:inline-flex;align-items:center;gap:.45rem;font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:600}
+  .service-kicker::before{content:"";width:5px;height:5px;background:var(--gold)}
+  .service-body h3{font-size:1.22rem;margin:.7rem 0 .45rem}
+  .service-body p{font-size:.95rem;color:var(--cream-2);line-height:1.6}
   .hero-meta .m:last-child{border:0;margin:0;padding:0}
   .hero-meta .k{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--cream-3);margin-bottom:.3rem}
   .hero-meta .v{font-family:"Space Grotesk";font-weight:500;font-size:1rem}
@@ -106,6 +126,8 @@
   .sec-head{max-width:62ch;margin-bottom:clamp(2.5rem,5vw,3.6rem)}
   .sec-head .eyebrow{margin-bottom:1.1rem}
   .sec-head .lead{margin-top:1rem}
+  .section-title--spaced{margin-top:1rem}
+  .section-intro{margin-top:1rem}
 
   /* services */
   .svc-row{display:grid;grid-template-columns:auto 1fr auto;gap:clamp(1.3rem,4vw,3.2rem);align-items:start;
@@ -141,9 +163,11 @@
   .cle-flow i{color:var(--gold);font-style:normal;padding:0 .35rem}
 
   /* réalisations */
-  .real-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:clamp(2.5rem,5vw,3.5rem)}
-  .real{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--noir-3);transition:.3s var(--ease)}
+  .real-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:clamp(2.5rem,5vw,3.5rem)}
+  .real{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--noir-3);transition:.3s var(--ease)}
   .real:hover{border-color:var(--line-gold);transform:translateY(-3px)}
+  .real--wide{grid-column:span 2}
+  .real--tall{grid-row:span 2}
   .real .ph{aspect-ratio:4/3;position:relative;background:var(--noir-4);overflow:hidden}
   .real .ph::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 25%,rgba(201,167,95,.12),transparent 55%)}
   .real .ph .art{position:absolute;inset:22% 24%;border:1.5px solid var(--gold);opacity:.4;border-radius:4px}
@@ -164,8 +188,11 @@
 
   /* tarifs */
   .tarifs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:clamp(2.5rem,5vw,3.5rem)}
-  .tarif{border:1px solid var(--line);border-radius:12px;padding:1.7rem 1.6rem;background:var(--noir-3);transition:.3s var(--ease);display:flex;flex-direction:column}
+  .tarif{border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.5rem;background:var(--noir-3);transition:.3s var(--ease);display:flex;flex-direction:column}
   .tarif:hover{border-color:var(--line-gold);transform:translateY(-3px)}
+  .tarif-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:.95rem}
+  .tarif .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:600}
+  .tarif--featured{background:linear-gradient(135deg,rgba(201,167,95,.12),rgba(18,16,18,.96));border-color:rgba(201,167,95,.25)}
   .tarif h4{font-family:"Space Grotesk";font-weight:500;font-size:1.18rem;margin-bottom:.5rem}
   .tarif p{font-size:.9rem;color:var(--cream-2);font-weight:400;line-height:1.5;flex:1;margin-bottom:1.2rem}
   .tarif .price{font-family:"Space Grotesk";font-weight:600;font-size:1.5rem;letter-spacing:-.02em;
@@ -287,6 +314,7 @@
 
   @media(max-width:980px){
     .devis-grid,.zone-grid{grid-template-columns:1fr}
+    .btn--header{padding:.62rem .82rem;font-size:.76rem}
     .real-grid{grid-template-columns:repeat(2,1fr)}
     .tarifs-grid{grid-template-columns:repeat(2,1fr)}
     .logi-grid{grid-template-columns:repeat(2,1fr)}
@@ -300,7 +328,9 @@
   @media(max-width:620px){
     .parc-grid{grid-template-columns:1fr;gap:2.6rem}
     .frow{grid-template-columns:1fr}
-    .real-grid,.tarifs-grid,.logi-grid{grid-template-columns:1fr}
+    .real-grid,.tarifs-grid,.logi-grid,.service-grid{grid-template-columns:1fr}
+    .real--wide{grid-column:span 1}
+    .service-card--alt{transform:none}
     .why-grid{grid-template-columns:1fr 1fr}
     .svc-row{grid-template-columns:auto 1fr;gap:1rem}
     .svc-go{grid-column:2;justify-self:start;margin-top:.4rem}
