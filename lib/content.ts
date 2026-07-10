@@ -1,3 +1,36 @@
+import heroImage from '@/assets/modern_living_room_with_large_window_on_the_2.jpg';
+import montageImage from '@/assets/modern_living_room_with_beige_sofa_and_wooden.jpg';
+import cuisineImage from '@/assets/modern_kitchen_with_white_cabinets_and_black_count_2.jpg';
+import dressingImage from '@/assets/black_sliding_wardrobe_with_large_mirror_in_the.jpg';
+import bureauImage from '@/assets/modern_office_space_with_large_window_that_offers.jpg';
+import amenagementImage from '@/assets/modern_dining_area_with_round_wooden_table_and.jpg';
+import logistiqueImage from '@/assets/an_empty_office_space_with_large_wooden_desk.jpg';
+import travauxImage from '@/assets/white_bathroom_vanity_with_single_sink_and_mirror.jpg';
+import realisation1 from '@/assets/modern_kitchen_with_large_wooden_table_in_the.jpg';
+import realisation2 from '@/assets/white_wardrobe_in_bedroom_the_wardrobe_has_two_2.jpg';
+import realisation3 from '@/assets/modern_office_space_with_white_reception_desk_in.jpg';
+import realisation4 from '@/assets/wooden_sideboard_in_room_with_floral_wallpaper_the.jpg';
+import realisation5 from '@/assets/modern_wardrobe_with_black_and_silver_color_scheme.jpg';
+import realisation6 from '@/assets/white_wooden_bed_frame_with_two_drawers_underneath.jpg';
+import realisation7 from '@/assets/modern_living_room_with_gray_sectional_sofa_in_2.jpg';
+import realisation8 from '@/assets/modern_living_room_with_large_flat_screen_tv.jpg';
+import wardrobeImage1 from '@/assets/black_sliding_wardrobe_with_large_mirror_in_the.jpg';
+import wardrobeImage2 from '@/assets/white_wardrobe_in_bedroom_the_wardrobe_has_two_2.jpg';
+import wardrobeImage3 from '@/assets/modern_wardrobe_with_black_and_silver_color_scheme.jpg';
+import officeImage1 from '@/assets/modern_office_space_with_large_window_that_offers.jpg';
+import officeImage2 from '@/assets/modern_office_space_with_white_reception_desk_in.jpg';
+import salonImage1 from '@/assets/modern_living_room_with_gray_sectional_sofa_in_2.jpg';
+import salonImage2 from '@/assets/modern_living_room_with_large_flat_screen_tv.jpg';
+import outdoorImage1 from '@/assets/patio_area_of_house_with_blue_gazebo_attached.jpg';
+import outdoorImage2 from '@/assets/small_garden_with_gravel_ground_and_variety_of.jpg';
+import spaImage from '@/assets/round_inflatable_hot_tub_on_wooden_deck_the.jpg';
+import diningImage from '@/assets/modern_dining_area_with_round_wooden_table_and.jpg';
+import shelvingImage from '@/assets/large_wooden_shelving_unit_in_room_with_hardwood.jpg';
+import bedroomImage1 from '@/assets/white_wooden_bed_frame_with_two_drawers_underneath.jpg';
+import tableImage1 from '@/assets/modern_kitchen_with_wooden_table_in_the_center.jpg';
+import bookcaseImage from '@/assets/tall_wooden_bookcase_with_six_shelves_in_room_2.jpg';
+import sideboardImage from '@/assets/wooden_sideboard_in_room_with_floral_wallpaper_the.jpg';
+
 export type Service = {
   slug: string;
   name: string;
@@ -9,7 +42,7 @@ export type Service = {
   image?: string;
 };
 
-export const HERO_IMAGE = "https://files.cdn-files-a.com/uploads/8174732/2000_67e45b12a54e9.jpg";
+export const HERO_IMAGE = heroImage.src;
 
 export const CREDIT_IMPOT = "Services à la personne : jusqu’à 50 % de crédit d’impôt sur les prestations éligibles. Une prestation de 200 € ne vous coûte réellement que 100 €.";
 
@@ -46,7 +79,7 @@ export const SERVICES: Service[] = [
       "montage de meubles Loiret",
       "montage IKEA Orléans"
     ],
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_gi-67cd6b753ea0d.jpg"
+    "image": montageImage.src
   },
   {
     "slug": "cuisine",
@@ -79,7 +112,7 @@ export const SERVICES: Service[] = [
       "pose de cuisine Orléans",
       "montage cuisine Loiret"
     ],
-    "image": "https://images.cdn-files-a.com/uploads/8174732/2000_649427b0c47f1.jpg?width=1000"
+    "image": cuisineImage.src
   },
   {
     "slug": "dressing-pax",
@@ -112,7 +145,7 @@ export const SERVICES: Service[] = [
       "dressing PAX Orléans",
       "montage dressing Loiret"
     ],
-    "image": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d0188d937.jpg?width=1000"
+    "image": dressingImage.src
   },
   {
     "slug": "mobilier-professionnel",
@@ -145,7 +178,7 @@ export const SERVICES: Service[] = [
       "mobilier professionnel Orléans",
       "aménagement de bureaux Orléans"
     ],
-    "image": "https://images.cdn-files-a.com/uploads/8174732/2000_64bed3d045720.jpg?width=1000"
+    "image": bureauImage.src
   },
   {
     "slug": "amenagement-cle-en-main",
@@ -179,7 +212,7 @@ export const SERVICES: Service[] = [
       "aménagement clé en main Loiret",
       "rénovation intérieure Orléans"
     ],
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_gi-67d58f81af1fa.jpg"
+    "image": amenagementImage.src
   },
   {
     "slug": "logistique",
@@ -212,7 +245,7 @@ export const SERVICES: Service[] = [
       "réception stockage mobilier Orléans",
       "logistique mobilier Loiret"
     ],
-    "image": "https://images.cdn-files-a.com/uploads/8174732/800_64b80a4e396b5-thumbnail.jpg?width=1000"
+    "image": logistiqueImage.src
   },
   {
     "slug": "petits-travaux",
@@ -246,243 +279,243 @@ export const SERVICES: Service[] = [
       "fixation TV Orléans",
       "petits travaux Loiret"
     ],
-    "image": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2d627cccc.jpg?width=1000"
+    "image": travauxImage.src
   }
 ];
 
 export const REALISATIONS: { src: string; title: string; cat: string }[] = [
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d018c8735_filter_6489d03f895cf.jpg?width=850",
+    "src": realisation1.src,
     "title": "Cuisine équipée & finitions",
     "cat": "Cuisine & aménagement"
   },
   {
-    "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d019cafe0_filter_67e0515e1ea98.jpg",
+    "src": realisation2.src,
     "title": "Dressing PAX & rangements",
     "cat": "Dressings & rangement"
   },
   {
-    "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d01968f3c_filter_67e2d44d279db.jpg",
+    "src": realisation3.src,
     "title": "Bureau & mobilier professionnel",
     "cat": "Bureaux & espaces pro"
   },
   {
-    "src": "https://files.cdn-files-a.com/uploads/8174732/2000_6489d01ac2448_filter_67e2d67a581a1.jpg",
+    "src": realisation4.src,
     "title": "Un bahut Amazon",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d0188d937.jpg?width=850",
+    "src": realisation5.src,
     "title": "Un dressing Pax Ikea",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d01adb6b7.jpg?width=850",
+    "src": realisation6.src,
     "title": "Un lit coffre Conforama",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d01ac5159.jpg?width=850",
+    "src": realisation7.src,
     "title": "Un lit coffre But",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d01abaa45.jpg?width=850",
+    "src": realisation8.src,
     "title": "Un lit coffre Conforama",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d01ac6e09.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Un buffet Conforama",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_6489d01af34e0.jpg?width=850",
+    "src": wardrobeImage2.src,
     "title": "Une armoire Conforama",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b1e762c4.jpg?width=850",
+    "src": wardrobeImage1.src,
     "title": "Installation & pose de porte de placard coulissant",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b1ea4cc6.jpg?width=850",
+    "src": wardrobeImage3.src,
     "title": "Installations d'un dressing Lapeyre",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b1f43060.jpg?width=850",
+    "src": bedroomImage1.src,
     "title": "Installation d'une chambre mobilier Ikea",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b203ec04.jpg?width=850",
+    "src": tableImage1.src,
     "title": "Une table Ikea",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b219125f.jpg?width=850",
+    "src": bookcaseImage.src,
     "title": "Une bibliothèque Picawood",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b2201fe9.jpg?width=850",
+    "src": bedroomImage1.src,
     "title": "Un lit 2 places Conforama",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b21df13b.jpg?width=850",
+    "src": salonImage1.src,
     "title": "Un canapé 2 places Conforama",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b21aef34.jpg?width=850",
+    "src": salonImage1.src,
     "title": "Un canapé 7 places d'angle Conforama",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b222bbe1.jpg?width=850",
+    "src": salonImage2.src,
     "title": "Un canapé 3 places Ikea",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_648c0b22923e2.jpg?width=850",
+    "src": salonImage2.src,
     "title": "Installation d'un salon mobilier Ikea",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_649425b39df60_filter_649425eb88aca.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Une étagère VILTO Ikea",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_649427b0c47f1.jpg?width=850",
+    "src": diningImage.src,
     "title": "Une Table à manger et l'installation et la pose d'un miroir La Redoute",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_649da0595725b.jpg?width=850",
+    "src": bedroomImage1.src,
     "title": "Montage & agencement de plusieurs lits",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_649da059e2d96.jpg?width=850",
+    "src": outdoorImage2.src,
     "title": "Montage d'une maisonnette de 4m²",
     "cat": "Extérieur & divers"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/800_64a14ce77ee70-thumbnail.jpg?width=850",
+    "src": outdoorImage2.src,
     "title": "Rempotage",
     "cat": "Extérieur & divers"
   },
   {
-    "src": "https://files.cdn-files-a.com/uploads/8174732/800_64b7e615b5d95-thumbnail_filter_67eedb7c917bf.jpg",
+    "src": spaImage.src,
     "title": "Installation d'un Spa INTEX",
     "cat": "Extérieur & divers"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64b7f78152b79.jpg?width=850",
+    "src": salonImage1.src,
     "title": "Un canapé d'angle Conforama",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64b7f78164130.jpg?width=850",
+    "src": salonImage2.src,
     "title": "Un meuble télévision Conforama",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64b7f79ec131c.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Un porte manteau Conforama",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64b7f79f09c73.jpg?width=850",
+    "src": salonImage2.src,
     "title": "Un meuble TV But",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64b7f79ea1247.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Un bahut But",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/800_64b7f7aa8aa2e-thumbnail.jpg?width=850",
+    "src": bookcaseImage.src,
     "title": "Une bibliothèque IKEA type billy",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/800_64b80a4e396b5-thumbnail.jpg?width=850",
+    "src": officeImage1.src,
     "title": "Montage des meubles au centre des archives à orléans",
     "cat": "Bureaux & pro"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64bed3d045720.jpg?width=850",
+    "src": officeImage2.src,
     "title": "Un bureau gamer BUT",
     "cat": "Bureaux & pro"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_64bed40dc6c53.jpg?width=850",
+    "src": sideboardImage.src,
     "title": "Un mobilier chaussure moderne BUT",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_650eb90457ea6.jpg?width=850",
+    "src": bedroomImage1.src,
     "title": "Un lit Amazon",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_650eb905b940c.jpg?width=850",
+    "src": salonImage1.src,
     "title": "Un canapé d'angle Conforama",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_650eb9080f2d7.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Un buffet moderne BUT",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2be184765.png?width=850",
+    "src": outdoorImage1.src,
     "title": "Un Toboggan extérieure",
     "cat": "Extérieur & divers"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2c0a52694.png?width=850",
+    "src": bedroomImage1.src,
     "title": "Une chambre avec des meubles Ikea",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2d627cccc.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Montage de meuble & fixation d'étagère IKEA",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2d6303c6d.jpg?width=850",
+    "src": shelvingImage.src,
     "title": "Un buffet sur mesure de centimetre.com",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65ae2d649a308.jpg?width=850",
+    "src": salonImage2.src,
     "title": "Montage & Agencement d'un meubles télévision Amazon",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://files.cdn-files-a.com/uploads/8174732/2000_65e8c31f10a49_filter_67eecb1720471.png",
+    "src": diningImage.src,
     "title": "Montage d'une table à langer Amazon",
     "cat": "Rangements & meubles"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65e8c31f1594e.png?width=850",
+    "src": bedroomImage1.src,
     "title": "Montage d'un lit 2 places IKEA",
     "cat": "Chambres & dressings"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65e8c31f17958.png?width=850",
+    "src": salonImage1.src,
     "title": "Installation d'un canapé 2 Place IKEA",
     "cat": "Salons & canapés"
   },
   {
-    "src": "https://images.cdn-files-a.com/uploads/8174732/2000_65e8c31ef1669.png?width=850",
+    "src": bedroomImage1.src,
     "title": "Agencement d'un lit 1 Place",
     "cat": "Chambres & dressings"
   }

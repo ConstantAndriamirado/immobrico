@@ -220,21 +220,21 @@ export default function Home() {
               <span className="eyebrow">Avis Google</span>
               <h2 className="h2 section-title--spaced">Des projets réalisés avec sérieux et précision.</h2>
             </div>
-            <div className="gnote"><span className="stars">★★★★★</span><b>5,0</b><span>· Avis Google</span></div>
+            <div className="gnote"><span className="stars">5/5</span><b>5,0</b><span>· Avis Google</span></div>
           </div>
           <div className="avis-grid stagger">
             <div className="avis">
-              <div className="stars">★★★★★</div>
+              <div className="stars">5/5</div>
               <p>« Montage d’un dressing complet en une matinée. C’est nickel et tout est droit. »</p>
               <div className="who"><b>Marie L.</b><span>Orléans · particulier</span></div>
             </div>
             <div className="avis">
-              <div className="stars">★★★★★</div>
+              <div className="stars">5/5</div>
               <p>« Aménagement de nos bureaux : réception, montage, installation, tout était géré. »</p>
               <div className="who"><b>Thomas R.</b><span>Saran · entreprise</span></div>
             </div>
             <div className="avis">
-              <div className="stars">★★★★★</div>
+              <div className="stars">5/5</div>
               <p>« Je fais appel à eux entre deux locations. Sérieux, ponctuels, logements impeccables. »</p>
               <div className="who"><b>Sophie M.</b><span>Olivet · bailleur</span></div>
             </div>
