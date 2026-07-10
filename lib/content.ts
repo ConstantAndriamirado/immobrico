@@ -289,6 +289,29 @@ export const SERVICES: Service[] = [
 
 export type GalleryItem = { type: 'image' | 'video'; src?: string; poster?: string; videoUrl?: string; title: string; cat: string };
 
+const VIDEO_GALLERY_ITEMS: GalleryItem[] = [
+  { type: 'video', poster: dressingImage.src, videoUrl: '/videos/z_0_20260610_111116_compressed_compressed.mp4', title: 'Vidéo chantier 01', cat: 'Chambres & dressings' },
+  { type: 'video', poster: salonImage1.src, videoUrl: '/videos/z_0_20260610_111006_compressed_compressed.mp4', title: 'Vidéo chantier 02', cat: 'Salons & canapés' },
+  { type: 'video', poster: cuisineImage.src, videoUrl: '/videos/z_0_20260610_110953_compressed_compressed.mp4', title: 'Vidéo chantier 03', cat: 'Rangements & meubles' },
+  { type: 'video', poster: bureauImage.src, videoUrl: '/videos/z_0_20260325_103520_compressed_compressed.mp4', title: 'Vidéo chantier 04', cat: 'Bureaux & espaces pro' },
+  { type: 'video', poster: amenagementImage.src, videoUrl: '/videos/z_0_20251222_124555_compressed_compressed.mp4', title: 'Vidéo chantier 05', cat: 'Rangements & meubles' },
+  { type: 'video', poster: outdoorImage2.src, videoUrl: '/videos/z_0_20260610_111147_compressed_compressed.mp4', title: 'Vidéo chantier 06', cat: 'Extérieur & divers' },
+  { type: 'video', poster: diningImage.src, videoUrl: '/videos/z_0_20260610_111125_compressed_compressed.mp4', title: 'Vidéo chantier 07', cat: 'Rangements & meubles' },
+  { type: 'video', poster: shelvingImage.src, videoUrl: '/videos/z_0_20260611_175056_compressed_compressed.mp4', title: 'Vidéo chantier 08', cat: 'Rangements & meubles' },
+  { type: 'video', poster: bookcaseImage.src, videoUrl: '/videos/z_0_20260611_154517_compressed_compressed.mp4', title: 'Vidéo chantier 09', cat: 'Rangements & meubles' },
+  { type: 'video', poster: sideboardImage.src, videoUrl: '/videos/z_0_20260611_175140_compressed_compressed.mp4', title: 'Vidéo chantier 10', cat: 'Rangements & meubles' },
+  { type: 'video', poster: wardrobeImage4.src, videoUrl: '/videos/z_0_20260612_121842_compressed_compressed.mp4', title: 'Vidéo chantier 11', cat: 'Chambres & dressings' },
+  { type: 'video', poster: salonImage2.src, videoUrl: '/videos/z_0_VID_20251023_135643_compressed_compressed.mp4', title: 'Vidéo chantier 12', cat: 'Salons & canapés' },
+  { type: 'video', poster: salonImage3.src, videoUrl: '/videos/z_0_VID_20251017_130325_compressed_compressed.mp4', title: 'Vidéo chantier 13', cat: 'Salons & canapés' },
+  { type: 'video', poster: salonImage4.src, videoUrl: '/videos/z_0_VID_20250930_182834_compressed_compressed.mp4', title: 'Vidéo chantier 14', cat: 'Salons & canapés' },
+  { type: 'video', poster: spaImage.src, videoUrl: '/videos/z_0_VID_20250925_171139_compressed_compressed.mp4', title: 'Vidéo chantier 15', cat: 'Extérieur & divers' },
+  { type: 'video', poster: outdoorImage1.src, videoUrl: '/videos/z_0_VID_20250730_160155_compressed_compressed.mp4', title: 'Vidéo chantier 16', cat: 'Extérieur & divers' },
+  { type: 'video', poster: bedroomImage1.src, videoUrl: '/videos/z_0_VID_20250729_090045_compressed_compressed.mp4', title: 'Vidéo chantier 17', cat: 'Chambres & dressings' },
+  { type: 'video', poster: bedroomImage2.src, videoUrl: '/videos/z_0_VID_20250418_123134_compressed_compressed.mp4', title: 'Vidéo chantier 18', cat: 'Chambres & dressings' },
+  { type: 'video', poster: tableImage1.src, videoUrl: '/videos/z_0_VID_20250328_183342_compressed_compressed.mp4', title: 'Vidéo chantier 19', cat: 'Cuisine & aménagement' },
+  { type: 'video', poster: wardrobeImage1.src, videoUrl: '/videos/z_0_VID_20250328_183327_compressed_compressed.mp4', title: 'Vidéo chantier 20', cat: 'Chambres & dressings' }
+];
+
 export const REALISATIONS_MORE: GalleryItem[] = [
   {
     type: 'image',
@@ -314,27 +337,7 @@ export const REALISATIONS_MORE: GalleryItem[] = [
     title: 'Table à manger & agencement intérieur',
     cat: 'Rangements & meubles'
   },
-  {
-    type: 'video',
-    poster: dressingImage.src,
-    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    title: 'Montage dressing en vidéo',
-    cat: 'Chambres & dressings'
-  },
-  {
-    type: 'video',
-    poster: salonImage1.src,
-    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
-    title: 'Aménagement salon en vidéo',
-    cat: 'Salons & canapés'
-  },
-  {
-    type: 'video',
-    poster: cuisineImage.src,
-    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    title: 'Pose de cuisine en vidéo',
-    cat: 'Rangements & meubles'
-  }
+  ...VIDEO_GALLERY_ITEMS
 ];
 
 export const REALISATIONS: { src?: string; images?: string[]; title: string; cat: string }[] = [
