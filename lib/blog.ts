@@ -1,3 +1,16 @@
+import articleImage1 from '@/assets/modern_office_space_with_large_window_that_offers.jpg';
+import articleImage2 from '@/assets/modern_living_room_with_round_wooden_dining_table.jpg';
+import articleImage3 from '@/assets/modern_dining_area_in_small_apartment_the_room.jpg';
+import articleImage4 from '@/assets/balcony_with_two_wicker_chairs_and_small_table.jpg';
+import articleImage5 from '@/assets/modern_office_space_with_white_reception_desk_in.jpg';
+import articleImage6 from '@/assets/an_empty_office_space_with_large_wooden_desk.jpg';
+import articleImage7 from '@/assets/patio_area_with_gray_wicker_sofa_and_two.jpg';
+import articleImage8 from '@/assets/modern_living_room_with_large_flat_screen_tv.jpg';
+import articleImage9 from '@/assets/modern_reception_desk_with_curved_design_the_desk.jpg';
+import articleImage10 from '@/assets/patio_area_of_house_with_blue_gazebo_attached.jpg';
+import articleImage11 from '@/assets/round_inflatable_hot_tub_on_wooden_deck_the.jpg';
+import articleImage12 from '@/assets/modern_kitchen_with_stainless_steel_sink_and_count.jpg';
+
 export type Block = { kind: 'h' | 'p' | 'ul'; text?: string; items?: string[] };
 
 export type Article = { slug: string; title: string; date: string; readMin: number; image: string; excerpt: string; body: Block[] };
@@ -8,7 +21,7 @@ export const ARTICLES: Article[] = [
     "title": "Outils Bosch : la qualité professionnelle au service du montage ImmoBrico",
     "date": "16 juin 2025",
     "readMin": 2,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_683c2ba23e3d4.jpg",
+    "image": articleImage1.src,
     "excerpt": "",
     "body": [
       {
@@ -58,7 +71,7 @@ export const ARTICLES: Article[] = [
     "title": "Un intérieur cocooning avec ImmoBrico et nos partenaires textiles haut de gamme",
     "date": "9 juin 2025",
     "readMin": 2,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_683c263196cf2.png",
+    "image": articleImage2.src,
     "excerpt": "",
     "body": [
       {
@@ -96,7 +109,7 @@ export const ARTICLES: Article[] = [
     "title": "Meubler sa maison avec style grâce à ImmoBrico + nos marques partenaires (Darty, Amazon, Aliexpress...)",
     "date": "2 juin 2025",
     "readMin": 3,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_683b4664b6ae6.png",
+    "image": articleImage3.src,
     "excerpt": "Meubler sa maison avec style grâce à ImmoBrico + nos marques partenaires",
     "body": [
       {
@@ -119,10 +132,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "promos-darty-ete",
-    "title": "☀️ Meubles d’été, promos Darty, montage pro : ImmoBrico vous simplifie la vie !",
+    "title": "Meubles d’été, promos Darty, montage pro : ImmoBrico vous simplifie la vie !",
     "date": "31 mai 2025",
     "readMin": 2,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_683aff8f73afd.jpg",
+    "image": articleImage4.src,
     "excerpt": "",
     "body": [
       {
@@ -154,10 +167,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "mobilier-professionnel-experts",
-    "title": "✨ VOS MEUBLES PROFESSIONNELS, MONTÉS ET AGENCÉS PAR DES EXPERTS !",
+    "title": "VOS MEUBLES PROFESSIONNELS, MONTÉS ET AGENCÉS PAR DES EXPERTS !",
     "date": "14 mars 2025",
     "readMin": 1,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_67c4c0487383b.png",
+    "image": articleImage5.src,
     "excerpt": "Entreprises, collectivités, résidences étudiantes, grandes distributions, hôpitaux, établissements publics ou privés… nous sommes là pour vous ! Vous avez déjà vos meubles ? Pas de",
     "body": [
       {
@@ -172,10 +185,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "expert-amenagement-bureaux",
-    "title": "🔧 Besoin d'un expert en aménagement et montage pour vos bureaux ?",
+    "title": "Besoin d'un expert en aménagement et montage pour vos bureaux ?",
     "date": "10 mars 2025",
     "readMin": 1,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_67cc99f3aa80c.png",
+    "image": articleImage6.src,
     "excerpt": "\"ImmoBrico accompagne les entreprises du Loiret et d'Île-de-France dans l'aménagement et la maintenance de leurs bureaux. Une installation rapide, fiable et sans stress !\"",
     "body": [
       {
@@ -190,10 +203,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "espaces-de-pause",
-    "title": "📢 TRANSFORMEZ VOS ESPACES DE PAUSE AVEC IMMOBRICO ! 🛋️✨",
+    "title": "TRANSFORMEZ VOS ESPACES DE PAUSE AVEC IMMOBRICO !",
     "date": "2 mars 2025",
     "readMin": 2,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_67c49e2750455.png",
+    "image": articleImage7.src,
     "excerpt": "Et grâce à nos partenaires privilégiés , nous pouvons même vous accompagner sur la fourniture de mobilier adapté à vos besoins (tables, fauteuils, canapés, rangements, etc.).",
     "body": [
       {
@@ -208,10 +221,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "plus-que-du-montage",
-    "title": "🔧 Nouveauté chez ImmoBrico : Nous vous proposons bien plus que des services de montage de meubles !",
+    "title": "Nouveauté chez ImmoBrico : Nous vous proposons bien plus que des services de montage de meubles !",
     "date": "30 sept. 2024",
     "readMin": 2,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_66f02b8c5b1ea.png",
+    "image": articleImage8.src,
     "excerpt": "",
     "body": [
       {
@@ -236,10 +249,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "aide-montage-agencement-achat",
-    "title": "✨ Besoin d'aide pour le montage, l'agencement ou l'achat de vos meubles ? ✨",
+    "title": "Besoin d'aide pour le montage, l'agencement ou l'achat de vos meubles ?",
     "date": "23 sept. 2024",
     "readMin": 3,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_66efee9b051e6.png",
+    "image": articleImage9.src,
     "excerpt": "ImmoBrico, spécialiste du montage, agencement et installation de meubles pour particuliers et professionnels. Contactez-nous pour un service clé en main avec devis gratuit !",
     "body": [
       {
@@ -258,10 +271,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "reduire-vos-impots",
-    "title": "🎉 Profitez de nos services tout en réduisant vos impôts ! 🎉",
+    "title": "Profitez de nos services tout en réduisant vos impôts !",
     "date": "12 août 2024",
     "readMin": 1,
-    "image": "https://files.cdn-files-a.com/uploads/8174732/800_gi-66b608e08acc0.jpg",
+    "image": articleImage10.src,
     "excerpt": "Profitez de nos services tout en réduisant vos impôts ! Une prestation facturée 200€ ne vous coûtera que 100€ après application du crédit d'impôt.",
     "body": [
       {
@@ -276,10 +289,10 @@ export const ARTICLES: Article[] = [
   },
   {
     "slug": "choisir-le-bon-canape",
-    "title": "🛋️ Post Éducatif : Comment Choisir le Canapé Parfait pour Votre Maison 🏡",
+    "title": "Post Éducatif : Comment Choisir le Canapé Parfait pour Votre Maison",
     "date": "3 juil. 2024",
     "readMin": 3,
-    "image": "https://images.cdn-files-a.com/uploads/8174732/800_66674fa3f2135.png?width=1100",
+    "image": articleImage11.src,
     "excerpt": "",
     "body": [
       {
@@ -306,7 +319,7 @@ export const ARTICLES: Article[] = [
     "title": "Astuces pour Organiser le Montage de Vos Meubles",
     "date": "30 juin 2024",
     "readMin": 3,
-    "image": "https://images.cdn-files-a.com/uploads/8174732/800_6665db097719b.jpg?width=1100",
+    "image": articleImage12.src,
     "excerpt": "Le montage de meubles peut parfois sembler une tâche ardue, mais avec un peu d'organisation et quelques astuces simples, vous pouvez y arriver",
     "body": [
       {
