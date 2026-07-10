@@ -15,7 +15,7 @@
     -webkit-font-smoothing:antialiased;line-height:1.7;font-weight:400;overflow-x:hidden}
   .container{max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.3rem,5vw,2.4rem)}
   h1,h2,h3,h4{font-family:"Space Grotesk",sans-serif;font-weight:500;line-height:1.08;letter-spacing:-.022em;color:var(--cream)}
-  .display{font-size:clamp(2.5rem,6.6vw,4.7rem);font-weight:500;letter-spacing:-.032em;line-height:1.02}
+  .display{font-size:clamp(1.8rem,3.4vw,2.8rem);font-weight:500;letter-spacing:-.032em;line-height:1.08}
   .h2{font-size:clamp(1.9rem,4.2vw,3rem);font-weight:500;letter-spacing:-.026em}
   a{color:inherit;text-decoration:none}
   ::selection{background:var(--gold);color:var(--noir)}
@@ -191,6 +191,9 @@
   .tarif{border:1px solid var(--line);border-radius:16px;padding:1.6rem 1.5rem;background:var(--noir-3);transition:.3s var(--ease);display:flex;flex-direction:column}
   .tarif:hover{border-color:var(--line-gold);transform:translateY(-3px)}
   .tarif-head{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:.95rem}
+  .tarif-head--split{display:grid;grid-template-columns:minmax(80px,0.4fr) minmax(0,0.6fr);align-items:center;gap:.75rem}
+  .tarif-head--split .tag{white-space:nowrap}
+  .tarif-head--split .price{display:block;line-height:1.1}
   .tarif .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.16em;color:var(--gold);font-weight:600}
   .tarif--featured{background:linear-gradient(135deg,rgba(201,167,95,.12),rgba(18,16,18,.96));border-color:rgba(201,167,95,.25)}
   .tarif h4{font-family:"Space Grotesk";font-weight:500;font-size:1.18rem;margin-bottom:.5rem}
@@ -422,5 +425,8 @@ a.card:hover .card-img img{transform:scale(1.04)}
 .svc-photo{aspect-ratio:16/7;overflow:hidden;border-radius:16px;border:1px solid var(--line);background:var(--noir-4)}
 .svc-photo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:620px){.svc-photo{aspect-ratio:16/10}}
+.real-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;border:0;width:2.2rem;height:2.2rem;border-radius:999px;background:rgba(10,10,10,.75);color:var(--cream);font-size:1.2rem;cursor:pointer;display:grid;place-items:center;backdrop-filter:blur(4px)}
+.real-nav:hover{background:rgba(10,10,10,.9)}
+.real-nav-prev{left:.75rem}.real-nav-next{right:.75rem}
 
 .article-meta{font-family:"Inter";font-size:.82rem;color:var(--cream-3);text-transform:uppercase;letter-spacing:.1em}

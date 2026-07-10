@@ -189,7 +189,7 @@ export default function Home() {
               <p>Montage et installation complète, selon la configuration et l’agencement.</p>
             </div>
             <div className="tarif tarif--featured">
-              <div className="tarif-head"><span className="tag">Sur devis</span><div className="price">Aménagement clé en main</div></div>
+              <div className="tarif-head tarif-head--split"><span className="tag">Sur devis</span><div className="price">Aménagement clé en main</div></div>
               <p>Projet complet, de la réception à l’installation finale et aux finitions.</p>
             </div>
           </div>

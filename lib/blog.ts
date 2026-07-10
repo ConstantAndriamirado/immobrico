@@ -9,7 +9,7 @@ import articleImage8 from '@/assets/modern_living_room_with_large_flat_screen_tv
 import articleImage9 from '@/assets/modern_reception_desk_with_curved_design_the_desk.jpg';
 import articleImage10 from '@/assets/patio_area_of_house_with_blue_gazebo_attached.jpg';
 import articleImage11 from '@/assets/round_inflatable_hot_tub_on_wooden_deck_the.jpg';
-import articleImage12 from '@/assets/modern_kitchen_with_stainless_steel_sink_and_count_2.jpg';
+import articleImage12 from '@/assets/modern_kitchen_with_stainless_steel_sink_and_count.jpg';
 
 export type Block = { kind: 'h' | 'p' | 'ul'; text?: string; items?: string[] };
 

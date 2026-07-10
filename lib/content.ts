@@ -15,21 +15,25 @@ import realisation6 from '@/assets/white_wooden_bed_frame_with_two_drawers_under
 import realisation7 from '@/assets/modern_living_room_with_gray_sectional_sofa_in_2.jpg';
 import realisation8 from '@/assets/modern_living_room_with_large_flat_screen_tv.jpg';
 import wardrobeImage1 from '@/assets/black_sliding_wardrobe_with_large_mirror_in_the.jpg';
-import wardrobeImage2 from '@/assets/white_wardrobe_in_bedroom_the_wardrobe_has_two_2.jpg';
 import wardrobeImage3 from '@/assets/modern_wardrobe_with_black_and_silver_color_scheme.jpg';
 import officeImage1 from '@/assets/modern_office_space_with_large_window_that_offers.jpg';
 import officeImage2 from '@/assets/modern_office_space_with_white_reception_desk_in.jpg';
 import salonImage1 from '@/assets/modern_living_room_with_gray_sectional_sofa_in_2.jpg';
 import salonImage2 from '@/assets/modern_living_room_with_large_flat_screen_tv.jpg';
+import salonImage3 from '@/assets/modern_living_room_with_beige_sofa_and_round.jpg';
+import salonImage4 from '@/assets/living_room_with_blue_velvet_sofa_in_the.jpg';
 import outdoorImage1 from '@/assets/patio_area_of_house_with_blue_gazebo_attached.jpg';
 import outdoorImage2 from '@/assets/small_garden_with_gravel_ground_and_variety_of.jpg';
 import spaImage from '@/assets/round_inflatable_hot_tub_on_wooden_deck_the.jpg';
 import diningImage from '@/assets/modern_dining_area_with_round_wooden_table_and.jpg';
 import shelvingImage from '@/assets/large_wooden_shelving_unit_in_room_with_hardwood.jpg';
+import shelvingImage2 from '@/assets/wooden_bookshelf_in_corner_of_room_with_hardwood.jpg';
 import bedroomImage1 from '@/assets/white_wooden_bed_frame_with_two_drawers_underneath.jpg';
+import bedroomImage2 from '@/assets/modern_bedroom_with_single_bed_in_the_center.jpg';
 import tableImage1 from '@/assets/modern_kitchen_with_wooden_table_in_the_center.jpg';
 import bookcaseImage from '@/assets/tall_wooden_bookcase_with_six_shelves_in_room_2.jpg';
 import sideboardImage from '@/assets/wooden_sideboard_in_room_with_floral_wallpaper_the.jpg';
+import wardrobeImage4 from '@/assets/large_white_wardrobe_in_room_with_wooden_flooring.jpg';
 
 export type Service = {
   slug: string;
@@ -283,7 +287,7 @@ export const SERVICES: Service[] = [
   }
 ];
 
-export const REALISATIONS: { src: string; title: string; cat: string }[] = [
+export const REALISATIONS: { src?: string; images?: string[]; title: string; cat: string }[] = [
   {
     "src": realisation1.src,
     "title": "Cuisine équipée & finitions",
@@ -330,7 +334,7 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Rangements & meubles"
   },
   {
-    "src": wardrobeImage2.src,
+    "src": wardrobeImage4.src,
     "title": "Une armoire Conforama",
     "cat": "Chambres & dressings"
   },
@@ -360,7 +364,7 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Rangements & meubles"
   },
   {
-    "src": bedroomImage1.src,
+    "src": bedroomImage2.src,
     "title": "Un lit 2 places Conforama",
     "cat": "Chambres & dressings"
   },
@@ -370,7 +374,7 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Salons & canapés"
   },
   {
-    "src": salonImage1.src,
+    "src": salonImage3.src,
     "title": "Un canapé 7 places d'angle Conforama",
     "cat": "Salons & canapés"
   },
@@ -380,12 +384,12 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Salons & canapés"
   },
   {
-    "src": salonImage2.src,
+    "src": salonImage4.src,
     "title": "Installation d'un salon mobilier Ikea",
     "cat": "Salons & canapés"
   },
   {
-    "src": shelvingImage.src,
+    "src": shelvingImage2.src,
     "title": "Une étagère VILTO Ikea",
     "cat": "Rangements & meubles"
   },
@@ -400,13 +404,8 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Chambres & dressings"
   },
   {
-    "src": outdoorImage2.src,
-    "title": "Montage d'une maisonnette de 4m²",
-    "cat": "Extérieur & divers"
-  },
-  {
-    "src": outdoorImage2.src,
-    "title": "Rempotage",
+    "images": [outdoorImage2.src, outdoorImage1.src],
+    "title": "Aménagement extérieur & jardin",
     "cat": "Extérieur & divers"
   },
   {
@@ -420,104 +419,34 @@ export const REALISATIONS: { src: string; title: string; cat: string }[] = [
     "cat": "Salons & canapés"
   },
   {
-    "src": salonImage2.src,
-    "title": "Un meuble télévision Conforama",
+    "images": [shelvingImage.src, shelvingImage2.src, bookcaseImage.src, sideboardImage.src],
+    "title": "Rangements & meubles sur mesure",
     "cat": "Rangements & meubles"
   },
   {
-    "src": shelvingImage.src,
-    "title": "Un porte manteau Conforama",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": salonImage2.src,
-    "title": "Un meuble TV But",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": shelvingImage.src,
-    "title": "Un bahut But",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": bookcaseImage.src,
-    "title": "Une bibliothèque IKEA type billy",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": officeImage1.src,
-    "title": "Montage des meubles au centre des archives à orléans",
+    "images": [officeImage1.src, officeImage2.src],
+    "title": "Aménagement de bureaux & espaces pro",
     "cat": "Bureaux & pro"
   },
   {
-    "src": officeImage2.src,
-    "title": "Un bureau gamer BUT",
-    "cat": "Bureaux & pro"
-  },
-  {
-    "src": sideboardImage.src,
-    "title": "Un mobilier chaussure moderne BUT",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": bedroomImage1.src,
-    "title": "Un lit Amazon",
+    "images": [bedroomImage1.src, bedroomImage2.src],
+    "title": "Chambres & lits installés",
     "cat": "Chambres & dressings"
   },
   {
-    "src": salonImage1.src,
-    "title": "Un canapé d'angle Conforama",
+    "images": [salonImage1.src, salonImage2.src, salonImage3.src, salonImage4.src],
+    "title": "Canapés & salons aménagés",
     "cat": "Salons & canapés"
-  },
-  {
-    "src": shelvingImage.src,
-    "title": "Un buffet moderne BUT",
-    "cat": "Rangements & meubles"
   },
   {
     "src": outdoorImage1.src,
-    "title": "Un Toboggan extérieure",
+    "title": "Aménagement extérieur & jardin",
     "cat": "Extérieur & divers"
   },
   {
-    "src": bedroomImage1.src,
-    "title": "Une chambre avec des meubles Ikea",
-    "cat": "Chambres & dressings"
-  },
-  {
-    "src": shelvingImage.src,
-    "title": "Montage de meuble & fixation d'étagère IKEA",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": shelvingImage.src,
-    "title": "Un buffet sur mesure de centimetre.com",
-    "cat": "Rangements & meubles"
-  },
-  {
-    "src": salonImage2.src,
-    "title": "Montage & Agencement d'un meubles télévision Amazon",
-    "cat": "Rangements & meubles"
-  },
-  {
     "src": diningImage.src,
-    "title": "Montage d'une table à langer Amazon",
+    "title": "Table à manger & agencement intérieur",
     "cat": "Rangements & meubles"
-  },
-  {
-    "src": bedroomImage1.src,
-    "title": "Montage d'un lit 2 places IKEA",
-    "cat": "Chambres & dressings"
-  },
-  {
-    "src": salonImage1.src,
-    "title": "Installation d'un canapé 2 Place IKEA",
-    "cat": "Salons & canapés"
-  },
-  {
-    "src": bedroomImage1.src,
-    "title": "Agencement d'un lit 1 Place",
-    "cat": "Chambres & dressings"
   }
 ];
 
