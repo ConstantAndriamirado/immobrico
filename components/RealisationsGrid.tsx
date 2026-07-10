@@ -1,6 +1,6 @@
 'use client';
-import { useState } from 'react';
-import { REALISATIONS, REAL_CATEGORIES } from '@/lib/content';
+import { useEffect, useRef, useState } from 'react';
+import { REALISATIONS, REALISATIONS_MORE, REAL_CATEGORIES } from '@/lib/content';
 
 function RealisationCard({ item, index }: { item: (typeof REALISATIONS)[number]; index: number }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -34,9 +34,74 @@ function RealisationCard({ item, index }: { item: (typeof REALISATIONS)[number];
   );
 }
 
+function GalleryCard({ item, index }: { item: (typeof REALISATIONS_MORE)[number]; index: number }) {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (item.type !== 'video' || !videoRef.current) return;
+
+    const video = videoRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (!entry?.isIntersecting) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, [item.type]);
+
+  const handleVideoClick = async () => {
+    if (!videoRef.current) return;
+    const video = videoRef.current;
+
+    if (video.paused) {
+      try {
+        await video.play();
+      } catch {
+        // Ignore autoplay restrictions and let the native controls handle playback.
+      }
+    } else {
+      video.pause();
+    }
+  };
+
+  return (
+    <article className="real" key={item.title + index}>
+      <div className="ph">
+        {item.type === 'video' ? (
+          <>
+            <video ref={videoRef} poster={item.poster} src={item.videoUrl} controls preload="metadata" playsInline onClick={handleVideoClick} />
+            <span className="real-badge">Vidéo</span>
+          </>
+        ) : (
+          <img src={item.src} alt={item.title} loading="lazy" decoding="async" />
+        )}
+      </div>
+      <div className="meta">
+        <span className="cat">{item.cat}</span>
+        <h4>{item.title}</h4>
+      </div>
+    </article>
+  );
+}
+
 export default function RealisationsGrid() {
   const [cat, setCat] = useState('Tous');
+  const [showMore, setShowMore] = useState(false);
   const items = cat === 'Tous' ? REALISATIONS : REALISATIONS.filter((r) => r.cat === cat);
+  const moreItems = cat === 'Tous' ? REALISATIONS_MORE : REALISATIONS_MORE.filter((r) => r.cat === cat);
+  const usedMedia = new Set(
+    REALISATIONS.flatMap((item) => (item.images ?? (item.src ? [item.src] : [])).filter(Boolean))
+  );
+  const imageItems = moreItems.filter((item) => item.type === 'image' && item.src && !usedMedia.has(item.src));
+  const videoItems = moreItems.filter((item) => item.type === 'video');
+
   return (
     <>
       <div className="real-filter">
@@ -48,6 +113,40 @@ export default function RealisationsGrid() {
         {items.map((item, i) => (
           <RealisationCard key={item.title + i} item={item} index={i} />
         ))}
+      </div>
+
+      <div className="real-more">
+        <button type="button" className="real-more__toggle" onClick={() => setShowMore((v) => !v)} aria-expanded={showMore}>
+          {showMore ? 'Masquer le contenu supplémentaire' : 'Voir plus'}
+        </button>
+
+        {showMore && (
+          <div className="real-more__content">
+            <div className="real-more__section">
+              <div className="real-more__header">
+                <h3>Images</h3>
+                <p>Autres réalisations visuelles autour de ce thème.</p>
+              </div>
+              <div className="real-grid real-grid--compact">
+                {imageItems.map((item, i) => (
+                  <GalleryCard key={item.title + i} item={item} index={i} />
+                ))}
+              </div>
+            </div>
+
+            <div className="real-more__section">
+              <div className="real-more__header">
+                <h3>Vidéos</h3>
+                <p>Extraits de montage et mise en scène de certains chantiers.</p>
+              </div>
+              <div className="real-grid real-grid--compact">
+                {videoItems.map((item, i) => (
+                  <GalleryCard key={item.title + i} item={item} index={i} />
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

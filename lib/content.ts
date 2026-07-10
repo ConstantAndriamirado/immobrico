@@ -287,6 +287,56 @@ export const SERVICES: Service[] = [
   }
 ];
 
+export type GalleryItem = { type: 'image' | 'video'; src?: string; poster?: string; videoUrl?: string; title: string; cat: string };
+
+export const REALISATIONS_MORE: GalleryItem[] = [
+  {
+    type: 'image',
+    src: realisation1.src,
+    title: 'Cuisine équipée & finitions',
+    cat: 'Rangements & meubles'
+  },
+  {
+    type: 'image',
+    src: officeImage1.src,
+    title: 'Aménagement de bureaux & espaces pro',
+    cat: 'Bureaux & pro'
+  },
+  {
+    type: 'image',
+    src: outdoorImage2.src,
+    title: 'Aménagement extérieur & jardin',
+    cat: 'Extérieur & divers'
+  },
+  {
+    type: 'image',
+    src: diningImage.src,
+    title: 'Table à manger & agencement intérieur',
+    cat: 'Rangements & meubles'
+  },
+  {
+    type: 'video',
+    poster: dressingImage.src,
+    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+    title: 'Montage dressing en vidéo',
+    cat: 'Chambres & dressings'
+  },
+  {
+    type: 'video',
+    poster: salonImage1.src,
+    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm',
+    title: 'Aménagement salon en vidéo',
+    cat: 'Salons & canapés'
+  },
+  {
+    type: 'video',
+    poster: cuisineImage.src,
+    videoUrl: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
+    title: 'Pose de cuisine en vidéo',
+    cat: 'Rangements & meubles'
+  }
+];
+
 export const REALISATIONS: { src?: string; images?: string[]; title: string; cat: string }[] = [
   {
     "src": realisation1.src,

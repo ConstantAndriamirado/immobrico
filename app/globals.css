@@ -348,7 +348,7 @@
     html{scroll-behavior:auto}
   }
 /* ====================== pages vitrine ====================== */
-.page-hero{position:relative;padding:clamp(8.5rem,15vw,11rem) 0 clamp(2.5rem,5vw,3.5rem);overflow:hidden;border-bottom:1px solid var(--line)}
+.page-hero{position:relative;padding:clamp(6.2rem,10vw,8rem) 0 clamp(2.5rem,5vw,3.5rem);overflow:hidden;border-bottom:1px solid var(--line)}
 .page-hero::before{content:"";position:absolute;top:-15%;right:-6%;width:48vw;height:48vw;max-width:620px;max-height:620px;background:radial-gradient(circle,rgba(201,167,95,.12),transparent 62%);pointer-events:none}
 .page-hero .container{position:relative;z-index:2}
 .page-hero h1{margin:1.3rem 0 1.2rem;max-width:20ch}
@@ -391,6 +391,14 @@ a.card:hover{border-color:var(--line-gold);transform:translateY(-3px)}
 .real-filter button{font-family:"Inter";font-weight:500;font-size:.86rem;padding:.5rem 1.05rem;border:1px solid var(--line);border-radius:30px;background:transparent;color:var(--cream-2);cursor:pointer;transition:.25s var(--ease)}
 .real-filter button:hover{border-color:var(--line-gold);color:var(--cream)}
 .real-filter button.active{background:var(--brass);border-color:transparent;color:var(--noir);font-weight:600}
+.real-more{margin-top:clamp(2rem,4vw,2.8rem)}
+.real-more__toggle{font-family:"Space Grotesk";font-weight:600;font-size:.95rem;padding:.8rem 1.1rem;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--cream);cursor:pointer;transition:.25s var(--ease)}
+.real-more__toggle:hover{border-color:var(--line-gold);color:var(--gold)}
+.real-more__content{margin-top:1.4rem;display:grid;gap:2rem}
+.real-more__section{border-top:1px solid var(--line);padding-top:1.4rem}
+.real-more__header{margin-bottom:1rem}
+.real-more__header h3{font-size:1.15rem;margin-bottom:.25rem}
+.real-more__header p{color:var(--cream-2);font-size:.95rem}
 
 .info-list{list-style:none;margin-top:1rem}
 .info-list li{display:flex;gap:1rem;align-items:baseline;padding:.8rem 0;border-top:1px solid var(--line-2)}
